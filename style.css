@@ -1,0 +1,326 @@
+
+/* Remove margens e espaços automáticos do navegador */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+/* Rolagem suave ao clicar no menu */
+html{
+  scroll-behavior:smooth;
+}
+
+/* Corpo geral do site */
+body{
+  font-family:Arial, sans-serif;
+  background:#f4f4f4;
+  color:#333;
+}
+
+/* Cabeçalho */
+header{
+  background:#1b5e20;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 40px;
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+
+/* Logo */
+.logo{
+  color:white;
+  font-size:28px;
+  font-weight:bold;
+}
+
+/* Links do menu */
+nav a{
+  color:white;
+  text-decoration:none;
+  margin-left:20px;
+  transition:0.3s;
+}
+
+nav a:hover{
+  color:#a5d6a7;
+}
+
+/* Banner */
+.banner{
+  position:relative;
+}
+
+.banner img{
+  width:100%;
+  height:600px;
+  object-fit:cover;
+}
+
+/* Texto sobre o banner */
+.texto-banner{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+  background:rgba(0,0,0,0.6);
+  padding:40px;
+  border-radius:20px;
+  text-align:center;
+  color:white;
+  width:80%;
+  backdrop-filter:blur(5px);
+}
+
+.texto-banner h1{
+  font-size:48px;
+  margin-bottom:20px;
+}
+
+/* Botões */
+button{
+  margin-top:20px;
+  padding:12px 20px;
+  border:none;
+  border-radius:8px;
+  background:#2e7d32;
+  color:white;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+button:hover{
+  background:#1b5e20;
+}
+
+/* Seções */
+section{
+  padding:60px 30px;
+  text-align:center;
+  animation:fade 1s;
+}
+
+/* Animação de entrada */
+@keyframes fade{
+  from{
+    opacity:0;
+    transform:translateY(20px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+/* Galeria */
+.galeria{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.galeria img{
+  width:350px;
+  height:250px;
+  object-fit:cover;
+  border-radius:15px;
+  box-shadow:0 0 15px rgba(0,0,0,0.3);
+  transition:0.3s;
+}
+
+.galeria img:hover{
+  transform:scale(1.05);
+}
+
+/* Cards */
+.cards{
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  flex-wrap:wrap;
+}
+
+.card{
+  width:350px;
+  background:white;
+  border-radius:15px;
+  overflow:hidden;
+  box-shadow:0 0 15px rgba(0,0,0,0.2);
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-10px);
+}
+
+.card img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+}
+
+.card h3{
+  margin:20px 0;
+}
+
+.card p{
+  padding:0 20px 20px 20px;
+}
+
+/* Blog */
+.blog{
+  background:#e8f5e9;
+}
+
+.blog img{
+  width:80%;
+  max-width:700px;
+  border-radius:15px;
+  margin:20px 0;
+}
+
+/* Quiz */
+.quiz{
+  background:#f1f8e9;
+}
+
+#resultadoQuiz{
+  margin-top:20px;
+  font-size:20px;
+  font-weight:bold;
+}
+
+/* Mapa */
+.mapa{
+  background:#e8f5e9;
+}
+
+/* Chatbot */
+.chatbot{
+  background:#f1f8e9;
+}
+
+.caixa-chat{
+  background:white;
+  max-width:600px;
+  margin:20px auto;
+  padding:20px;
+  border-radius:10px;
+  box-shadow:0 0 10px rgba(0,0,0,0.2);
+}
+
+/* Campo de texto */
+input{
+  padding:12px;
+  width:300px;
+  border-radius:8px;
+  border:1px solid #ccc;
+}
+
+/* Contato */
+.contato{
+  background:#e8f5e9;
+}
+
+/* Rodapé */
+footer{
+  background:#1b5e20;
+  color:white;
+  text-align:center;
+  padding:20px;
+}
+
+/* Modo escuro */
+.dark{
+  background:#121212;
+  color:#f4f4f4;
+}
+
+.dark section{
+  background:#1e1e1e;
+  color:#f4f4f4;
+}
+
+.dark header{
+  background:#000;
+}
+
+.dark footer{
+  background:#000;
+  color:white;
+}
+
+.dark .card{
+  background:#2c2c2c;
+  color:#f4f4f4;
+}
+
+.dark .caixa-chat{
+  background:#2c2c2c;
+  color:#f4f4f4;
+}
+
+.dark .texto-banner{
+  background:rgba(0,0,0,0.8);
+}
+
+.dark nav a{
+  color:white;
+}
+
+.dark input{
+  background:#333;
+  color:white;
+  border:1px solid #555;
+}
+
+.dark button{
+  background:#388e3c;
+}
+
+.dark button:hover{
+  background:#2e7d32;
+}
+
+/* Responsividade para celular */
+@media(max-width:768px){
+
+  header{
+    flex-direction:column;
+    padding:20px;
+  }
+
+  nav{
+    margin-top:15px;
+  }
+
+  nav a{
+    display:block;
+    margin:10px 0;
+  }
+
+  .texto-banner h1{
+    font-size:32px;
+  }
+
+  .banner img{
+    height:450px;
+  }
+
+  .galeria img{
+    width:90%;
+  }
+
+  .card{
+    width:90%;
+  }
+
+  input{
+    width:90%;
+  }
+}
