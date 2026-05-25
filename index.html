@@ -2,41 +2,201 @@
 <html lang="pt-br">
 
 <head>
+  <!-- Permite acentos e caracteres especiais -->
   <meta charset="UTF-8">
+
+  <!-- Deixa o site responsivo para celular, tablet e computador -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Título que aparece na aba do navegador -->
   <title>Agro Forte</title>
 
-  <!-- Conecta o arquivo CSS ao HTML -->
+  <!-- Conecta o HTML ao CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- Cabeçalho principal -->
+  <!-- Cabeçalho do site -->
   <header>
+    <div class="logo">
+      🌱 Agro Forte
+    </div>
 
-    <!-- Título principal do site -->
-    <h1>Agro Forte, Futuro Sustentável</h1>
-
-    <!-- Botão que chama uma função JavaScript -->
-    <button onclick="modoEscuro()">
-      🌙 Modo Escuro
-    </button>
-
+    <!-- Menu de navegação -->
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#tecnologia">Tecnologia</a>
+      <a href="#blog">Blog</a>
+      <a href="#quiz">Quiz</a>
+      <a href="#chatbot">IA</a>
+      <a href="#contato">Contato</a>
+    </nav>
   </header>
 
-  <!-- Seção principal -->
-  <section>
+  <!-- Banner principal -->
+  <section class="banner" id="home">
+    <img src="img/banner.jpg" alt="Banner Agro">
 
-    <h2>Tecnologia no Campo</h2>
+    <div class="texto-banner">
+      <h1>Agro Forte, Futuro Sustentável</h1>
+
+      <p>
+        Tecnologia, inovação e sustentabilidade transformando o agronegócio.
+      </p>
+
+      <button onclick="modoEscuro()">
+        🌙 Modo Escuro
+      </button>
+    </div>
+  </section>
+
+  <!-- Sobre o projeto -->
+  <section class="sobre" id="sobre">
+    <h2>Sobre o Projeto</h2>
 
     <p>
-      A tecnologia ajuda a produzir alimentos de forma sustentável,
-      reduzindo desperdícios e protegendo o meio ambiente.
+      Este projeto foi desenvolvido utilizando HTML, CSS e JavaScript
+      com foco em sustentabilidade e tecnologia no agronegócio.
     </p>
 
+    <p>
+      O objetivo é demonstrar como a tecnologia pode ajudar produtores rurais
+      a preservar recursos naturais, reduzir desperdícios e aumentar a produtividade.
+    </p>
   </section>
+
+  <!-- Galeria de imagens -->
+  <section class="galeria">
+    <img src="img/agro1.jpg" alt="Trator agrícola">
+    <img src="img/agro2.jpg" alt="Plantação sustentável">
+    <img src="img/agro3.jpg" alt="Drone agrícola">
+  </section>
+
+  <!-- Cards de tecnologia e sustentabilidade -->
+  <section class="cards" id="tecnologia">
+
+    <div class="card">
+      <img src="img/tecnologia.jpg" alt="Tecnologia agrícola">
+
+      <h3>Tecnologia no Agro</h3>
+
+      <p>
+        Sensores, drones e inteligência artificial ajudam agricultores
+        a monitorar lavouras em tempo real.
+      </p>
+    </div>
+
+    <div class="card">
+      <img src="img/sustentabilidade.jpg" alt="Sustentabilidade">
+
+      <h3>Sustentabilidade</h3>
+
+      <p>
+        Produzir alimentos preservando água, solo e meio ambiente
+        é essencial para o futuro das próximas gerações.
+      </p>
+    </div>
+
+  </section>
+
+  <!-- Blog -->
+  <section class="blog" id="blog">
+    <h2>Blog AgroTech</h2>
+
+    <img src="img/blog.jpg" alt="Blog agro">
+
+    <p>
+      A agricultura moderna utiliza tecnologia para aumentar a produtividade
+      e reduzir impactos ambientais.
+    </p>
+
+    <p>
+      Sensores inteligentes conseguem medir temperatura, umidade do solo
+      e prever mudanças climáticas.
+    </p>
+
+    <p>
+      Drones agrícolas ajudam no monitoramento das lavouras,
+      permitindo análises rápidas e precisas.
+    </p>
+
+    <p>
+      A Inteligência Artificial também vem sendo utilizada para controlar
+      irrigação e otimizar recursos naturais.
+    </p>
+
+    <p>
+      Essas tecnologias ajudam agricultores a produzir mais alimentos
+      utilizando menos água e preservando o meio ambiente.
+    </p>
+  </section>
+
+  <!-- Quiz -->
+  <section class="quiz" id="quiz">
+    <h2>Quiz Ambiental</h2>
+
+    <p id="perguntaQuiz"></p>
+
+    <button id="btn1" onclick="verificarResposta(0)"></button>
+    <button id="btn2" onclick="verificarResposta(1)"></button>
+    <button id="btn3" onclick="verificarResposta(2)"></button>
+
+    <p id="resultadoQuiz"></p>
+  </section>
+
+  <!-- Mapa agrícola -->
+  <section class="mapa">
+    <h2>Mapa Agrícola</h2>
+
+    <p>
+      Regiões agrícolas e áreas rurais do Brasil.
+    </p>
+
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117115.71518863361!2d-51.172685!3d-23.310280!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94eb43d6b5a3bfff%3A0x4e5f6e0f7c9d5f22!2sLondrina%20-%20PR!5e0!3m2!1spt-BR!2sbr!4v1710000000000!5m2!1spt-BR!2sbr&quot;
+      width="100%"
+      height="450"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy">
+    </iframe>
+  </section>
+
+  <!-- Chatbot -->
+  <section class="chatbot" id="chatbot">
+    <h2>ChatBot Agro IA</h2>
+
+    <div class="caixa-chat">
+      <p id="mensagemBot">
+        🤖 Olá! Sou o Agro IA.
+        Pergunte sobre água, drones, IA, sustentabilidade ou agricultura.
+      </p>
+    </div>
+
+    <input
+      type="text"
+      id="pergunta"
+      placeholder="Digite sua pergunta">
+
+    <button onclick="enviarPergunta()">
+      Enviar
+    </button>
+  </section>
+
+  <!-- Contato -->
+  <section class="contato" id="contato">
+    <h2>Contato</h2>
+
+    <p>Email: agro@email.com</p>
+    <p>Projeto desenvolvido para o Agrinho 2026.</p>
+  </section>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>© 2026 - Projeto Agro Forte</p>
+  </footer>
 
   <!-- Conecta o JavaScript -->
   <script src="script.js"></script>
